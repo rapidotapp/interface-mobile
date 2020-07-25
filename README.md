@@ -1,5 +1,8 @@
 # rapid
 
+![build](https://github.com/rapidotapp/interface-mobile/workflows/build/badge.svg)
+![format](https://github.com/rapidotapp/interface-mobile/workflows/format/badge.svg)
+
 A new Flutter project.
 
 ## Getting Started
