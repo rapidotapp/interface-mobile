@@ -1,5 +1,5 @@
-import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class NavBar extends StatelessWidget {
   final int selected;
@@ -35,8 +35,13 @@ class NavBarButtonWidget extends StatelessWidget {
   final IconData icon;
   final Function onPressed;
   final String tooltip;
-  NavBarButtonWidget(
-      {this.selected = false, this.icon, this.onPressed, this.tooltip = ""});
+  
+  NavBarButtonWidget({
+    this.selected = false,
+    this.icon,
+    this.onPressed,
+    this.tooltip = "",
+  });
 
   Widget build(BuildContext ctx) {
     return Tooltip(
