@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'package:feather_icons_flutter/feather_icons_flutter.dart';
+
+import 'package:rapid/widgets/navBar.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -25,6 +29,9 @@ class MyApp extends StatelessWidget {
         // the app on. For desktop platforms, the controls will be smaller and
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        primaryColor: Color(0xFFFC8181),
+        accentColor: Color(0xFFFC8181),
+        scaffoldBackgroundColor: Color(0xFFFFF5F5),
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -112,6 +119,30 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+      bottomNavigationBar: NavBar(
+        selected: 0,
+        items: [
+          NavBarButton(
+            icon: FeatherIcons.users,
+            tooltip: "Friends",
+          ),
+          NavBarButton(
+            icon: FeatherIcons.mail,
+            tooltip: "Messages",
+          ),
+          NavBarButton(
+            icon: FeatherIcons.bell,
+            tooltip: "Notifications",
+          ),
+          NavBarButton(
+            icon: FeatherIcons.globe,
+            tooltip: "Explore",
+          ),
+        ],
+        onChange: (index) {
+          print(index);
+        },
+      ),
     );
   }
 }
