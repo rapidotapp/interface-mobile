@@ -35,7 +35,7 @@ class NavBarButtonWidget extends StatelessWidget {
   final IconData icon;
   final Function onPressed;
   final String tooltip;
-  
+
   NavBarButtonWidget({
     this.selected = false,
     this.icon,

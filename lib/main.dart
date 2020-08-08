@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         primaryColor: Color(0xFFFC8181),
         accentColor: Color(0xFFFC8181),
+        scaffoldBackgroundColor: Color(0xFFFFF5F5),
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
