@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:feather_icons_flutter/feather_icons_flutter.dart';
 
+import 'package:rapid/widgets/appBar.dart';
+import 'package:rapid/widgets/avatar.dart';
 import 'package:rapid/widgets/navBar.dart';
 
 void main() {
@@ -33,6 +35,9 @@ class MyApp extends StatelessWidget {
         accentColor: Color(0xFFFC8181),
         scaffoldBackgroundColor: Color(0xFFFFF5F5),
         fontFamily: "Inter",
+        appBarTheme: AppBarTheme(
+          color: Colors.white,
+        ),
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -80,10 +85,17 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
+      appBar: RapidAppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        titleString: "messages",
+        avatar: Avatar(
+          backgroundColor: Theme.of(context).appBarTheme.color,
+          url: "https://avatars2.githubusercontent.com/u/34525547",
+          glow: true,
+          active: true,
+          sizeFactor: 0.9,
+        ),
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
