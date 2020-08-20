@@ -8,7 +8,7 @@ class Avatar extends StatelessWidget {
   final Color backgroundColor;
   final bool admin;
   Avatar({
-    this.active,
+    this.active = false,
     this.url,
     this.backgroundColor = const Color(0xFFFFF5F5),
     this.admin = false,

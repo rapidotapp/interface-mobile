@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Color(0xFFFC8181),
         accentColor: Color(0xFFFC8181),
         scaffoldBackgroundColor: Color(0xFFFFF5F5),
+        fontFamily: "Inter",
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
