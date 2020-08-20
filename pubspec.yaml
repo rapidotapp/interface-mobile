@@ -1,6 +1,6 @@
 name: rapid
 description: The mobile app for rapid
-publish_to: 'none'
+publish_to: none
 version: 1.0.0+1
 
 environment:
@@ -9,7 +9,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^0.1.3
   feather_icons_flutter: ">=4.7.4"
 
 dev_dependencies:
@@ -19,6 +18,27 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: fonts/Inter-Thin.otf
+          weight: 100
+        - asset: fonts/Inter-ExtraLight.otf
+          weight: 200
+        - asset: fonts/Inter-Light.otf
+          weight: 300
+        - asset: fonts/Inter-Regular.otf
+          weight: 400
+        - asset: fonts/Inter-Medium.otf
+          weight: 500
+        - asset: fonts/Inter-SemiBold.otf
+          weight: 600
+        - asset: fonts/Inter-Bold.otf
+          weight: 700
+        - asset: fonts/Inter-ExtraBold.otf
+          weight: 800
+        - asset: fonts/Inter-Black.otf
+          weight: 900
 
 import_sorter:
   comments: false
