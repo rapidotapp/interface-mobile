@@ -23,11 +23,13 @@ class RapidAppBar extends StatelessWidget implements PreferredSizeWidget {
         children: [
           this.avatar,
           this.title ??
-              Text(this.titleString,
-                  style: TextStyle(
-                    color: Theme.of(ctx).accentColor,
-                    fontSize: 30,
-                  )),
+              Text(
+                this.titleString,
+                style: TextStyle(
+                  color: Theme.of(ctx).accentColor,
+                  fontSize: 30,
+                ),
+              ),
         ],
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
       ),

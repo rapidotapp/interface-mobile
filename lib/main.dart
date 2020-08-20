@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:feather_icons_flutter/feather_icons_flutter.dart';
+
 import 'package:rapid/widgets/appBar.dart';
 import 'package:rapid/widgets/avatar.dart';
-
 import 'package:rapid/widgets/navBar.dart';
 
 void main() {
@@ -92,6 +92,9 @@ class _MyHomePageState extends State<MyHomePage> {
         avatar: Avatar(
           backgroundColor: Theme.of(context).appBarTheme.color,
           url: "https://avatars2.githubusercontent.com/u/34525547",
+          glow: true,
+          active: true,
+          sizeFactor: 0.9,
         ),
       ),
       body: Center(
