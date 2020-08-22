@@ -106,45 +106,60 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
-        child: ListView(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          children: [
-            // Text(
-            //   'You have pushed the button this many times:',
-            // ),
-            // Text(
-            //   '$_counter',
-            //   style: Theme.of(context).textTheme.headline4,
-            // ),
-            DirectMessage(
-              avatar:
-                  "https://images.unsplash.com/photo-1559291001-693fb9166cba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-              username: "jellyfish",
-              time: "12:45",
-              messageText:
-                  "Hi there! I was wondering if you could do this thing real quick!",
-              unread: true,
-              onTap: () {
-                print("tapped!");
-              },
-              onLongPress: () {
-                print("long press!");
-              },
-            ),
-          ],
+        child: Builder(
+          builder: (BuildContext ctx) {
+            return ListView(
+              // Column is also a layout widget. It takes a list of children and
+              // arranges them vertically. By default, it sizes itself to fit its
+              // children horizontally, and tries to be as tall as its parent.
+              //
+              // Invoke "debug painting" (press "p" in the console, choose the
+              // "Toggle Debug Paint" action from the Flutter Inspector in Android
+              // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
+              // to see the wireframe for each widget.
+              //
+              // Column has various properties to control how it sizes itself and
+              // how it positions its children. Here we use mainAxisAlignment to
+              // center the children vertically; the main axis here is the vertical
+              // axis because Columns are vertical (the cross axis would be
+              // horizontal).
+              children: [
+                // Text(
+                //   'You have pushed the button this many times:',
+                // ),
+                // Text(
+                //   '$_counter',
+                //   style: Theme.of(context).textTheme.headline4,
+                // ),
+                DirectMessage(
+                  avatar: Avatar(
+                    url: "https://images.unsplash.com/photo-1559291001-693fb9166cba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+                    admin: true,
+                  ),
+                  username: "jellyfish",
+                  time: "12:45 PM",
+                  messageText:
+                      "Hi there! I was wondering if you could do this thing real quick!",
+                  unread: true,
+                  onTap: () {
+                    print("tapped!");
+                  },
+                  onLongPress: () {
+                    showModalBottomSheet(context: ctx, builder: (BuildContext ctx) => Text("hi"));
+                  },
+                ),
+                DirectMessage(
+                  time: "4:30 AM",
+                  messageText: "Good morning!",
+                  username: "moocow",
+                  avatar: Avatar(
+                    active: true,
+                    url: "https://images.unsplash.com/photo-1546445317-29f4545e9d53?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                  ),
+                )
+              ],
+            );
+          }
         ),
       ),
       floatingActionButton: FloatingActionButton(

@@ -6,7 +6,7 @@ class DirectMessage extends StatelessWidget {
   final String time;
   final String messageText;
   final bool unread;
-  final String avatar;
+  final Widget avatar;
   final String username;
   final Function onTap;
   final Function onLongPress;
@@ -27,13 +27,10 @@ class DirectMessage extends StatelessWidget {
       onTap: this.onTap ?? () {},
       onLongPress: this.onLongPress ?? () {},
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: Row(
           children: [
-            Avatar(
-              url: this.avatar,
-              sizeFactor: 0.8,
-            ),
+            this.avatar,
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15.0),
