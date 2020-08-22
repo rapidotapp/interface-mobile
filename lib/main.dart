@@ -10,7 +10,7 @@ class RapidApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Rapid',
-      theme: Themes().lightMode,
+      theme: Themes.lightMode,
       debugShowCheckedModeBanner: false,
       routes: {
         HomeRoute.routeName: (BuildContext ctx) => HomeRoute(),
