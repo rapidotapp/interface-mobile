@@ -28,7 +28,7 @@ class Avatar extends StatelessWidget {
             boxShadow: [
               if (this.glow)
                 BoxShadow(
-                    color: Theme.of(ctx).accentColor.withOpacity(0.6),
+                    color: Theme.of(ctx).primaryColor.withOpacity(0.6),
                     blurRadius: 20 * sizeFactor)
             ],
           ),
