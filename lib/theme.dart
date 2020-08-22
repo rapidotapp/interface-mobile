@@ -10,5 +10,7 @@ class Themes {
         appBarTheme: AppBarTheme(
           color: Colors.white,
         ),
+        splashColor: Color(0xFFFC8181).withOpacity(0.2),
+        highlightColor: Color(0xFFFC8181).withOpacity(0.2),
       );
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+
 import 'package:rapid/widgets/avatar.dart';
 
 class DirectMessage extends StatelessWidget {
@@ -25,7 +26,7 @@ class DirectMessage extends StatelessWidget {
   Widget build(BuildContext ctx) {
     return InkWell(
       onTap: this.onTap ?? () {},
-      onLongPress: this.onLongPress ?? () {},
+      onLongPress: this.onLongPress ?? null,
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: Row(
