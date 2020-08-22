@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import 'package:rapid/widgets/avatar.dart';
-
 class DirectMessage extends StatelessWidget {
   final String time;
   final String messageText;
