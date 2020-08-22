@@ -48,7 +48,8 @@ class MessagesRoute extends StatelessWidget {
               active: true,
               admin: true,
             ),
-            messageText: "Neigh I am a sea horse here with a nice long message to demonstrate text overflow handling",
+            messageText:
+                "Neigh I am a sea horse here with a nice long message to demonstrate text overflow handling",
             unread: false,
             onTap: () {
               print("I was tapped!");
