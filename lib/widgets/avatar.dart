@@ -47,9 +47,9 @@ class Avatar extends StatelessWidget {
               shape: BoxShape.circle,
               color: this.active ? Color(0xFF00FFAE) : Colors.grey[350],
               border: Border.all(
-                width: 4 * sizeFactor,
-                color: this.backgroundColor ?? Theme.of(context).scaffoldBackgroundColor
-              ),
+                  width: 4 * sizeFactor,
+                  color: this.backgroundColor ??
+                      Theme.of(context).scaffoldBackgroundColor),
             ),
           ),
         ),
