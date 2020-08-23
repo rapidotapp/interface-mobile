@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 
 class RapidAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -12,12 +13,25 @@ class RapidAppBar extends StatelessWidget implements PreferredSizeWidget {
   Size get preferredSize => Size(double.infinity, 120);
 
   @override
-  Widget build(BuildContext ctx) {
+  Widget build(BuildContext context) {
+    final appBarBrightness = Theme.of(context).appBarTheme.brightness;
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle.dark.copyWith(
+        statusBarColor:
+            appBarBrightness == Brightness.dark ? Colors.white : Colors.black,
+        statusBarBrightness: appBarBrightness,
+      ),
+    );
     return Container(
-      padding: EdgeInsets.only(top: 30, bottom: 10, left: 20, right: 20),
+      padding: EdgeInsets.only(
+        top: 30,
+        bottom: 10,
+        left: 20,
+        right: 20,
+      ),
       height: 120,
       decoration: BoxDecoration(
-        color: Theme.of(ctx).appBarTheme.color,
+        color: Theme.of(context).appBarTheme.color,
       ),
       child: Row(
         children: [
@@ -26,7 +40,7 @@ class RapidAppBar extends StatelessWidget implements PreferredSizeWidget {
               Text(
                 this.titleString,
                 style: TextStyle(
-                  color: Theme.of(ctx).accentColor,
+                  color: Theme.of(context).primaryColor,
                   fontSize: 30,
                 ),
               ),

@@ -21,7 +21,7 @@ class DirectMessage extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext ctx) {
+  Widget build(BuildContext context) {
     return InkWell(
       onTap: this.onTap ?? () {},
       onLongPress: this.onLongPress ?? null,
@@ -39,7 +39,7 @@ class DirectMessage extends StatelessWidget {
                     Text(
                       this.username,
                       style: TextStyle(
-                        color: Theme.of(ctx).accentColor,
+                        color: Theme.of(context).primaryColor,
                         fontSize: 20,
                       ),
                     ),
@@ -57,8 +57,13 @@ class DirectMessage extends StatelessWidget {
                           ),
                         ],
                         style: TextStyle(
-                          color:
-                              this.unread ? Colors.grey[700] : Colors.grey[400],
+                          color: this.unread
+                              ? Theme.of(context).brightness == Brightness.light
+                                  ? Colors.grey[700]
+                                  : Colors.grey[400]
+                              : Theme.of(context).brightness == Brightness.light
+                                  ? Colors.grey[400]
+                                  : Colors.grey[700],
                           fontSize: 15,
                         ),
                       ),

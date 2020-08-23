@@ -8,11 +8,11 @@ class NavBar extends StatelessWidget {
 
   NavBar({this.selected, this.items, this.onChange});
 
-  Widget build(BuildContext ctx) {
+  Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
       padding: EdgeInsets.symmetric(vertical: 10),
-      color: Colors.white,
+      color: Theme.of(context).appBarTheme.color,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: this.items.asMap().entries.map((e) {
@@ -43,17 +43,21 @@ class NavBarButtonWidget extends StatelessWidget {
     this.tooltip = "",
   });
 
-  Widget build(BuildContext ctx) {
+  Widget build(BuildContext context) {
     return Tooltip(
       message: this.tooltip,
       child: RawMaterialButton(
         onPressed: this.onPressed,
         elevation: 0.0,
-        fillColor: this.selected ? Color(0xFFFC8181) : Color(0xFFFFF5F5),
+        fillColor: this.selected
+            ? Theme.of(context).primaryColor
+            : Theme.of(context).scaffoldBackgroundColor,
         child: Icon(
           this.icon,
           size: 30.0,
-          color: this.selected ? Color(0xFFFFF5F5) : Color(0xFFFC8181),
+          color: this.selected
+              ? Theme.of(context).scaffoldBackgroundColor
+              : Theme.of(context).primaryColor,
         ),
         padding: EdgeInsets.all(15.0),
         shape: CircleBorder(),
