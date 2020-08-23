@@ -4,7 +4,8 @@ class RapidSwitch extends StatefulWidget {
   final List<String> items;
   final int initialSelected;
 
-  RapidSwitch({this.items = const [], this.initialSelected = 0}) : assert(items.length >= 1);
+  RapidSwitch({this.items = const [], this.initialSelected = 0})
+      : assert(items.length >= 1);
 
   RapidSwitchState createState() => RapidSwitchState();
 }
