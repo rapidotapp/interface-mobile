@@ -13,7 +13,7 @@ class Avatar extends StatelessWidget {
   Avatar({
     this.active = false,
     this.url,
-    this.backgroundColor = const Color(0xFFFFF5F5),
+    this.backgroundColor,
     this.admin = false,
     this.glow = false,
     this.sizeFactor = 1,
@@ -48,7 +48,7 @@ class Avatar extends StatelessWidget {
               color: this.active ? Color(0xFF00FFAE) : Colors.grey[350],
               border: Border.all(
                 width: 4 * sizeFactor,
-                color: Color(0xFF000000),
+                color: this.backgroundColor ?? Theme.of(context).scaffoldBackgroundColor
               ),
             ),
           ),
