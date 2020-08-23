@@ -3,7 +3,6 @@ import 'package:flutter/widgets.dart';
 
 import 'package:feather_icons_flutter/feather_icons_flutter.dart';
 
-import 'package:rapid/routes/messages/widgets/directMessage.dart';
 import 'package:rapid/widgets/appBar.dart';
 import 'package:rapid/widgets/avatar.dart';
 import 'package:rapid/widgets/navBar.dart';
