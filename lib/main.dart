@@ -13,7 +13,6 @@ class RapidApp extends StatelessWidget {
       title: 'Rapid',
       theme: Themes().lightMode,
       darkTheme: Themes().darkMode,
-      // themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
       routes: {
         HomeRoute.routeName: (BuildContext ctx) => HomeRoute(),

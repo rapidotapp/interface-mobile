@@ -33,7 +33,9 @@ class Themes {
       scaffoldBackgroundColor: Color.fromRGBO(23, 25, 35, 1),
       fontFamily: _fontFamily,
       appBarTheme: AppBarTheme(
-          color: Color.fromRGBO(26, 32, 44, 1), brightness: Brightness.dark),
+        color: Color.fromRGBO(26, 32, 44, 1),
+        brightness: Brightness.dark,
+      ),
       splashColor: primaryColor.withOpacity(0.2),
       highlightColor: primaryColor.withOpacity(0.2),
     );

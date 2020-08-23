@@ -19,7 +19,7 @@ class Avatar extends StatelessWidget {
     this.sizeFactor = 1,
   });
 
-  Widget build(BuildContext ctx) {
+  Widget build(BuildContext context) {
     return Stack(
       children: [
         Container(
@@ -28,7 +28,7 @@ class Avatar extends StatelessWidget {
             boxShadow: [
               if (this.glow)
                 BoxShadow(
-                    color: Theme.of(ctx).primaryColor.withOpacity(0.6),
+                    color: Theme.of(context).primaryColor.withOpacity(0.6),
                     blurRadius: 20 * sizeFactor)
             ],
           ),
@@ -48,7 +48,7 @@ class Avatar extends StatelessWidget {
               color: this.active ? Color(0xFF00FFAE) : Colors.grey[350],
               border: Border.all(
                 width: 4 * sizeFactor,
-                color: this.backgroundColor,
+                color: Color(0xFF000000),
               ),
             ),
           ),
@@ -71,7 +71,7 @@ class Avatar extends StatelessWidget {
                   ),
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Color(0xFFFC8181),
+                    color: Theme.of(context).primaryColor,
                   ),
                 ),
               ),
