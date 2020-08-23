@@ -1,0 +1,7 @@
+#!/bin/sh
+
+echo "\n🎨 Formatting code...\n"
+dartfmt -w .
+
+echo "\n🏭 Sorting imports...\n"
+flutter pub run import_sorter:main
