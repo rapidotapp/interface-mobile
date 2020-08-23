@@ -5,3 +5,5 @@ dartfmt -w .
 
 echo "\n🏭 Sorting imports...\n"
 flutter pub run import_sorter:main
+
+git add $(git diff --name-only --cached | paste -s -d " " -)

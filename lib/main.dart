@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:rapid/routes/explore/explore.dart';
 import 'package:rapid/routes/home/home.dart';
 import 'package:rapid/routes/messages/messages.dart';
 import 'package:rapid/theme.dart';
@@ -17,6 +18,7 @@ class RapidApp extends StatelessWidget {
       routes: {
         HomeRoute.routeName: (BuildContext ctx) => HomeRoute(),
         MessagesRoute.routeName: (BuildContext ctx) => MessagesRoute(),
+        ExploreRoute.routeName: (BuildContext ctx) => ExploreRoute(),
       },
     );
   }
